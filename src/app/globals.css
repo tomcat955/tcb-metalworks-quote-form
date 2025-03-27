@@ -66,3 +66,48 @@ select::placeholder {
   -webkit-text-fill-color: #6B7280 !important;
   opacity: 0.7 !important;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #6B7280 !important;
+    -webkit-text-fill-color: #6B7280 !important;
+    opacity: 0.7 !important;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  input,
+  textarea,
+  select {
+    @apply text-gray-900 bg-white;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    @apply text-gray-500;
+  }
+}
