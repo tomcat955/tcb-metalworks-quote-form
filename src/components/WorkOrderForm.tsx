@@ -47,7 +47,7 @@ export default function WorkOrderForm() {
       },
       consultation: {
         description: '',
-        preferredContactMethod: '',
+        preferredContactMethod: undefined,
         bestTimeToContact: '',
       },
       equipmentService: {
