@@ -24,23 +24,11 @@ const workLocations = [
   'Not Sure',
 ];
 
-const timelineOptions = [
-  'Emergency - Need ASAP',
-  'Within 24 hours',
-  'Within 1 week',
-  'Within 2 weeks',
-  'Within 1 month',
-  'Within 3 months',
-  'Flexible timeline',
-  'Other',
-];
-
 export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFabricationStepProps) {
   const { register, watch, formState: { errors } } = form;
 
-  const timelineType = watch('repairFabrication.timelineType');
-  const isHardDeadline = watch('repairFabrication.isHardDeadline');
   const workLocation = watch('repairFabrication.workLocation');
+  const timelineType = watch('repairFabrication.timelineType');
 
   return (
     <div className="space-y-6">

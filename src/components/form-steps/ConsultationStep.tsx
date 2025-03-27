@@ -23,7 +23,7 @@ export default function ConsultationStep({ form, onNext, onPrev }: ConsultationS
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Consultation Request</h2>
-        <p className="text-gray-600 mb-6">Please provide details about what you'd like to discuss.</p>
+        <p className="text-gray-600 mb-6">Please provide details about what you&apos;d like to discuss.</p>
       </div>
 
       <div className="space-y-6">
@@ -34,7 +34,7 @@ export default function ConsultationStep({ form, onNext, onPrev }: ConsultationS
           <textarea
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
             rows={4}
-            placeholder="Please describe what you'd like to discuss in detail"
+            placeholder="Please describe what you&apos;d like to discuss in detail"
             {...register('consultation.description')}
           />
           {errors.consultation?.description && (

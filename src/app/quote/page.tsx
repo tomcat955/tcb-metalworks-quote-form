@@ -9,7 +9,7 @@ export default function QuotePage() {
             Request a Quote
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Fill out the form below to get started with your project. We'll get back to you as soon as possible.
+            Fill out the form below to get started with your project. We&apos;ll get back to you as soon as possible.
           </p>
         </div>
         <WorkOrderForm />
