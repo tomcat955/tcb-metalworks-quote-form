@@ -43,7 +43,9 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
               MozAppearance: 'none',
               appearance: 'none',
               backgroundColor: '#1f2937',
-              colorScheme: 'dark'
+              colorScheme: 'dark',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
           {errors.customerInfo?.fullName && (
@@ -68,7 +70,9 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
               MozAppearance: 'none',
               appearance: 'none',
               backgroundColor: '#1f2937',
-              colorScheme: 'dark'
+              colorScheme: 'dark',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
           {errors.customerInfo?.companyName && (
@@ -93,7 +97,9 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
               MozAppearance: 'none',
               appearance: 'none',
               backgroundColor: '#1f2937',
-              colorScheme: 'dark'
+              colorScheme: 'dark',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
           {errors.customerInfo?.phoneNumber && (
@@ -118,7 +124,9 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
               MozAppearance: 'none',
               appearance: 'none',
               backgroundColor: '#1f2937',
-              colorScheme: 'dark'
+              colorScheme: 'dark',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
           {errors.customerInfo?.email && (
@@ -143,7 +151,9 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
               MozAppearance: 'none',
               appearance: 'none',
               backgroundColor: '#1f2937',
-              colorScheme: 'dark'
+              colorScheme: 'dark',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
           {errors.customerInfo?.projectName && (
