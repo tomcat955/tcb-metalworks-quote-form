@@ -10,7 +10,7 @@ export const customerInfoSchema = z.object({
 });
 
 export const blueprintQuoteSchema = z.object({
-  description: z.string().min(10, 'Description is required'),
+  description: z.string().optional(),
   quantity: z.number().min(1, 'Quantity must be at least 1'),
   material: z.string().min(1, 'Material is required'),
   materialSupply: z.enum(['yes', 'customer_supplied', 'not_sure']),

@@ -192,7 +192,7 @@ export default function BlueprintQuoteStep({ form, onNext, onPrev }: BlueprintQu
           <input
             type="date"
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-            {...register('blueprintQuote.desiredCompletionDate')}
+            {...register('blueprintQuote.desiredCompletionDate', { valueAsDate: true })}
           />
           {errors.blueprintQuote?.desiredCompletionDate && (
             <p className="mt-1 text-sm text-red-600">{errors.blueprintQuote.desiredCompletionDate.message}</p>
@@ -209,7 +209,7 @@ export default function BlueprintQuoteStep({ form, onNext, onPrev }: BlueprintQu
                 type="radio"
                 value="true"
                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
-                {...register('blueprintQuote.isHardDeadline')}
+                {...register('blueprintQuote.isHardDeadline', { setValueAs: v => v === 'true' })}
               />
               <label className="ml-3 block text-sm font-medium text-gray-700">
                 Yes
@@ -220,7 +220,7 @@ export default function BlueprintQuoteStep({ form, onNext, onPrev }: BlueprintQu
                 type="radio"
                 value="false"
                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
-                {...register('blueprintQuote.isHardDeadline')}
+                {...register('blueprintQuote.isHardDeadline', { setValueAs: v => v === 'true' })}
               />
               <label className="ml-3 block text-sm font-medium text-gray-700">
                 No
