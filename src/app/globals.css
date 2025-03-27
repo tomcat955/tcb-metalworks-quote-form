@@ -33,64 +33,44 @@ body {
   color-scheme: light !important;
 }
 
-/* Base styles for all form elements */
-input,
-textarea,
-select {
-  @apply text-black bg-white;
+/* Override Tailwind Forms plugin styles */
+.form-input,
+.form-textarea,
+.form-select,
+.form-checkbox,
+.form-radio {
+  @apply text-black bg-white !important;
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
   background-color: #ffffff !important;
 }
 
-/* Specific input types */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="date"],
-input[type="time"],
-textarea,
-select {
-  @apply text-black bg-white !important;
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
-}
-
-/* Placeholder text */
-input::placeholder,
-textarea::placeholder,
-select::placeholder {
-  @apply text-gray-500;
-  color: #6B7280 !important;
-  -webkit-text-fill-color: #6B7280 !important;
-  opacity: 0.7 !important;
-}
-
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  input,
-  textarea,
-  select {
+  .form-input,
+  .form-textarea,
+  .form-select,
+  .form-checkbox,
+  .form-radio {
     background-color: #ffffff !important;
     color: #000000 !important;
     -webkit-text-fill-color: #000000 !important;
     caret-color: #000000 !important;
   }
 
-  input::placeholder,
-  textarea::placeholder,
-  select::placeholder {
+  .form-input::placeholder,
+  .form-textarea::placeholder,
+  .form-select::placeholder {
     color: #6B7280 !important;
     -webkit-text-fill-color: #6B7280 !important;
     opacity: 0.7;
   }
 
   /* Override autofill styles */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
+  .form-input:-webkit-autofill,
+  .form-input:-webkit-autofill:hover,
+  .form-input:-webkit-autofill:focus,
+  .form-input:-webkit-autofill:active {
     -webkit-text-fill-color: #000000 !important;
     -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
     transition: background-color 5000s ease-in-out 0s;
