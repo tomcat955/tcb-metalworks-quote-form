@@ -33,7 +33,7 @@ body {
   color-scheme: light !important;
 }
 
-/* Force light mode for form elements */
+/* Base styles for all form elements */
 input,
 textarea,
 select {
