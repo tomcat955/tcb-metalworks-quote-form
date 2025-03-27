@@ -28,23 +28,41 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer base {
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  input[type="date"],
-  input[type="time"],
-  textarea,
-  select {
-    @apply text-gray-900 bg-white !important;
-    color: #171717 !important;
-  }
+/* Override any potential dark mode or system preferences */
+* {
+  color-scheme: light !important;
+}
 
-  input::placeholder,
-  textarea::placeholder,
-  select::placeholder {
-    @apply text-gray-500 !important;
-    color: #6B7280 !important;
-  }
+/* Force light mode for form elements */
+input,
+textarea,
+select {
+  color-scheme: light !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Specific input types */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  @apply text-black bg-white !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  @apply text-gray-500 !important;
+  color: #6B7280 !important;
+  -webkit-text-fill-color: #6B7280 !important;
+  opacity: 0.7 !important;
 }
