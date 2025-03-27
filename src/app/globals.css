@@ -69,55 +69,31 @@ select::placeholder {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  .mobile-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  input,
+  textarea,
+  select {
     background-color: #1f2937 !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     caret-color: #ffffff !important;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: transform;
   }
 
-  .mobile-input::placeholder {
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
     color: #9ca3af !important;
     -webkit-text-fill-color: #9ca3af !important;
     opacity: 0.7;
   }
 
-  .mobile-input:focus {
-    background-color: #1f2937 !important;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
-  }
-
-  /* Force text color for manually typed text */
+  /* Override autofill styles */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
-  input:-webkit-autofill:active,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  textarea:-webkit-autofill:active,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus,
-  select:-webkit-autofill:active {
-    -webkit-text-fill-color: #000000 !important;
-    -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 30px #1f2937 inset !important;
     transition: background-color 5000s ease-in-out 0s;
-  }
-
-  /* Ensure text is visible when typing */
-  input:not(:-webkit-autofill),
-  textarea:not(:-webkit-autofill),
-  select:not(:-webkit-autofill) {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
   }
 }
 
