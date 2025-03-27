@@ -34,8 +34,17 @@ body {
   input[type="tel"],
   input[type="number"],
   input[type="date"],
+  input[type="time"],
   textarea,
   select {
-    @apply text-gray-900 bg-white;
+    @apply text-gray-900 bg-white !important;
+    color: #171717 !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    @apply text-gray-500 !important;
+    color: #6B7280 !important;
   }
 }
