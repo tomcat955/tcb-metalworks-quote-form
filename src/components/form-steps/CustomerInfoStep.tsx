@@ -34,7 +34,8 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="text"
             id="fullName"
             {...register('customerInfo.fullName')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-black bg-white"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-black bg-white [color-scheme:light] [color:black] [-webkit-text-fill-color:black]"
+            style={{ color: 'black', WebkitTextFillColor: 'black' }}
           />
           {errors.customerInfo?.fullName && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.fullName.message}</p>
