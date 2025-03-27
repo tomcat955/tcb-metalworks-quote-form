@@ -32,7 +32,7 @@ export default function ConsultationStep({ form, onNext, onPrev }: ConsultationS
             What would you like to discuss?
           </label>
           <textarea
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             rows={4}
             placeholder="Please describe what you&apos;d like to discuss in detail"
             {...register('consultation.description')}
@@ -70,7 +70,7 @@ export default function ConsultationStep({ form, onNext, onPrev }: ConsultationS
             Preferred Contact Method
           </label>
           <select
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             {...register('consultation.preferredContactMethod')}
           >
             <option value="">Select a contact method</option>
@@ -89,7 +89,7 @@ export default function ConsultationStep({ form, onNext, onPrev }: ConsultationS
           </label>
           <input
             type="text"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             placeholder="e.g., After 2 PM, Weekdays only"
             {...register('consultation.bestTimeToContact')}
           />

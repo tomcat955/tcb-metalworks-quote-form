@@ -43,7 +43,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
             Description
           </label>
           <textarea
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             rows={4}
             {...register('repairFabrication.description')}
           />
@@ -100,7 +100,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
                   Facility Address
                 </label>
                 <textarea
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                   rows={3}
                   placeholder="Please provide the complete facility address"
                   {...register('repairFabrication.facilityAddress')}
@@ -119,7 +119,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
                     <label className="block text-sm text-gray-600">Open</label>
                     <input
                       type="time"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                       {...register('repairFabrication.hoursOfOperation.open')}
                     />
                   </div>
@@ -127,7 +127,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
                     <label className="block text-sm text-gray-600">Close</label>
                     <input
                       type="time"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                       {...register('repairFabrication.hoursOfOperation.close')}
                     />
                   </div>
@@ -142,7 +142,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
                   PPE Requirements
                 </label>
                 <textarea
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                   rows={3}
                   placeholder="Please specify any required PPE or safety requirements for working at this facility"
                   {...register('repairFabrication.ppeRequirements')}
@@ -160,7 +160,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
             Material
           </label>
           <select
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             {...register('repairFabrication.material')}
           >
             <option value="">Select a material</option>
@@ -181,7 +181,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
           </label>
           <input
             type="text"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             {...register('repairFabrication.materialThickness')}
           />
         </div>
@@ -265,14 +265,14 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
               <div className="ml-7">
                 <input
                   type="date"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                   {...register('repairFabrication.timeline')}
                 />
                 <div className="mt-2">
                   <label className="block text-sm font-medium text-gray-700">Is this a hard deadline?</label>
                   <div className="mt-1">
                     <select
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
                       {...register('repairFabrication.isHardDeadline')}
                     >
                       <option value="true">Yes</option>
@@ -306,7 +306,7 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
             Additional Notes
           </label>
           <textarea
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900 bg-white"
             rows={3}
             {...register('repairFabrication.additionalNotes')}
           />
