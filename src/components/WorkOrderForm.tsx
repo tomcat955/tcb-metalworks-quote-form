@@ -93,15 +93,16 @@ export default function WorkOrderForm() {
         return <WorkTypeStep form={form} onNext={nextStep} onPrev={prevStep} />;
       case 3:
         const workType = form.watch('workType');
+
         switch (workType) {
           case 'blueprint_quote':
-            return <BlueprintQuoteStep form={form} onNext={onSubmit} onPrev={prevStep} />;
+            return <BlueprintQuoteStep form={form} onNext={() => onSubmit(form.getValues())} onPrev={prevStep} />;
           case 'repair_fabrication':
-            return <RepairFabricationStep form={form} onNext={onSubmit} onPrev={prevStep} />;
+            return <RepairFabricationStep form={form} onNext={() => onSubmit(form.getValues())} onPrev={prevStep} />;
           case 'consultation':
-            return <ConsultationStep form={form} onNext={onSubmit} onPrev={prevStep} />;
+            return <ConsultationStep form={form} onNext={() => onSubmit(form.getValues())} onPrev={prevStep} />;
           case 'equipment_service':
-            return <EquipmentServiceStep form={form} onNext={onSubmit} onPrev={prevStep} />;
+            return <EquipmentServiceStep form={form} onNext={() => onSubmit(form.getValues())} onPrev={prevStep} />;
           default:
             return null;
         }
