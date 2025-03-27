@@ -70,6 +70,7 @@ export default function WorkOrderForm() {
 
   const onSubmit = async (data: FormData) => {
     console.log(data);
+    console.log(typeof data.blueprintQuote?.isHardDeadline); // Check the type
     // TODO: Handle form submission
   };
 
