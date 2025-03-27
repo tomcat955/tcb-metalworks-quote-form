@@ -34,7 +34,12 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="text"
             id="fullName"
             {...register('customerInfo.fullName')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900 [color-scheme:dark]"
+            style={{ 
+              color: 'white',
+              WebkitTextFillColor: 'white',
+              caretColor: 'white'
+            }}
           />
           {errors.customerInfo?.fullName && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.fullName.message}</p>
@@ -49,7 +54,12 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="text"
             id="companyName"
             {...register('customerInfo.companyName')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900 [color-scheme:dark]"
+            style={{ 
+              color: 'white',
+              WebkitTextFillColor: 'white',
+              caretColor: 'white'
+            }}
           />
           {errors.customerInfo?.companyName && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.companyName.message}</p>
@@ -64,7 +74,12 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="tel"
             id="phoneNumber"
             {...register('customerInfo.phoneNumber')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900 [color-scheme:dark]"
+            style={{ 
+              color: 'white',
+              WebkitTextFillColor: 'white',
+              caretColor: 'white'
+            }}
           />
           {errors.customerInfo?.phoneNumber && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.phoneNumber.message}</p>
@@ -79,7 +94,12 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="email"
             id="email"
             {...register('customerInfo.email')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900 [color-scheme:dark]"
+            style={{ 
+              color: 'white',
+              WebkitTextFillColor: 'white',
+              caretColor: 'white'
+            }}
           />
           {errors.customerInfo?.email && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.email.message}</p>
@@ -94,7 +114,12 @@ export default function CustomerInfoStep({ form, onNext }: CustomerInfoStepProps
             type="text"
             id="projectName"
             {...register('customerInfo.projectName')}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-white bg-gray-900 [color-scheme:dark]"
+            style={{ 
+              color: 'white',
+              WebkitTextFillColor: 'white',
+              caretColor: 'white'
+            }}
           />
           {errors.customerInfo?.projectName && (
             <p className="mt-1 text-sm text-red-600">{errors.customerInfo.projectName.message}</p>
