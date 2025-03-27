@@ -234,15 +234,16 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
           <label className="block text-sm font-medium text-gray-700">
             How soon do you need this completed?
           </label>
-          <div className="mt-2 space-y-4">
+          <div className="space-y-4">
             <div className="flex items-center">
               <input
                 type="radio"
+                id="emergency"
                 value="emergency"
                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 {...register('repairFabrication.timelineType')}
               />
-              <label className="ml-3 block text-sm font-medium text-gray-700">
+              <label htmlFor="emergency" className="ml-3 block text-sm font-medium text-gray-700">
                 Emergency - Need ASAP
               </label>
             </div>
@@ -250,59 +251,34 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
             <div className="flex items-center">
               <input
                 type="radio"
+                id="specific_date"
                 value="specific_date"
                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 {...register('repairFabrication.timelineType')}
               />
-              <label className="ml-3 block text-sm font-medium text-gray-700">
+              <label htmlFor="specific_date" className="ml-3 block text-sm font-medium text-gray-700">
                 Specific Date
               </label>
             </div>
 
             {timelineType === 'specific_date' && (
-              <div className="ml-7 space-y-4">
-                <div>
-                  <input
-                    type="date"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                    {...register('repairFabrication.timeline')}
-                  />
-                  {errors.repairFabrication?.timeline && (
-                    <p className="mt-1 text-sm text-red-600">{errors.repairFabrication.timeline.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Is this a hard deadline?
-                  </label>
-                  <div className="mt-2 space-y-2">
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        value="true"
-                        className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
-                        {...register('repairFabrication.isHardDeadline')}
-                      />
-                      <label className="ml-3 block text-sm font-medium text-gray-700">
-                        Yes
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        type="radio"
-                        value="false"
-                        className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
-                        {...register('repairFabrication.isHardDeadline')}
-                      />
-                      <label className="ml-3 block text-sm font-medium text-gray-700">
-                        No
-                      </label>
-                    </div>
+              <div className="ml-7">
+                <input
+                  type="date"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                  {...register('repairFabrication.timeline')}
+                />
+                <div className="mt-2">
+                  <label className="block text-sm font-medium text-gray-700">Is this a hard deadline?</label>
+                  <div className="mt-1">
+                    <select
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                      {...register('repairFabrication.isHardDeadline')}
+                    >
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
                   </div>
-                  {errors.repairFabrication?.isHardDeadline && (
-                    <p className="mt-1 text-sm text-red-600">{errors.repairFabrication.isHardDeadline.message}</p>
-                  )}
                 </div>
               </div>
             )}
@@ -310,11 +286,12 @@ export default function RepairFabricationStep({ form, onNext, onPrev }: RepairFa
             <div className="flex items-center">
               <input
                 type="radio"
+                id="flexible"
                 value="flexible"
                 className="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500"
                 {...register('repairFabrication.timelineType')}
               />
-              <label className="ml-3 block text-sm font-medium text-gray-700">
+              <label htmlFor="flexible" className="ml-3 block text-sm font-medium text-gray-700">
                 Flexible timeline
               </label>
             </div>
