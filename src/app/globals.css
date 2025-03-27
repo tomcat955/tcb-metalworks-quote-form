@@ -69,15 +69,29 @@ select::placeholder {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  input,
-  textarea,
-  select {
+  .mobile-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+    background-color: #1f2937 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .mobile-input::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
+    opacity: 0.7;
+  }
+
+  .mobile-input:focus {
+    background-color: #1f2937 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
   }
 
   /* Force text color for manually typed text */
